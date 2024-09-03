@@ -7,7 +7,7 @@ const MongoDB = require("./db");
 
 
 // Apply CORS middleware before defining routes
-app.use(cors({ origin: 'https://66d70efde19000374f60ed9c--ephemeral-kleicha-36aae5.netlify.app' }));
+app.use(cors({ origin: 'https://fooddeliverybymehul.netlify.app' }));
 app.use(express.json());
 
 MongoDB();
@@ -21,7 +21,7 @@ app.use("/api/v1", orderRouter);
 
 // CORS Headers for all routes
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://66d70efde19000374f60ed9c--ephemeral-kleicha-36aae5.netlify.app");
+    res.setHeader("Access-Control-Allow-Origin", "https://fooddeliverybymehul.netlify.app");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
