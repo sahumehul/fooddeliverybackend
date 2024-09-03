@@ -7,7 +7,7 @@ const MongoDB = require("./db");
 
 
 // Apply CORS middleware before defining routes
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors());
 app.use(express.json());
 
 MongoDB();
@@ -21,7 +21,7 @@ app.use("/api/v1", orderRouter);
 
 // CORS Headers for all routes
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.setHeader("Access-Control-Allow-Origin");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
